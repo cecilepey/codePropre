@@ -2,17 +2,31 @@ package ex1;
 
 import java.util.Date;
 
-public class entreprise {
+/**
+ * Classe qui représente une entreprise
+ * 
+ * @author Cécile Peyras
+ *
+ */
+public class Entreprise {
 
-	public int Siret;
-	public String Nom;
+	/** siret : numéro de siret de l'entreprise */
+	public int siret;
+	/** nom : raison sociale de l'entreprise */
+	public String nom;
+	/** adresse : String */
 	public String adresse;
-	public Date date_Creation;
-	
+	/** dateCreation : Date */
+	public Date dateCreation;
+
+	/** capitalMax : Capital de la société */
 	public static final int capitalMax = 3000000;
-	
-	public void Afficher_statut(){
-		
+
+	/**
+	 * Méthode qui permet d'afficher le statut de la société.
+	 */
+	public void afficher_statut() {
+
 	}
-	
+
 }

@@ -1,18 +1,25 @@
 package ex3;
 
+import ex3.corrige.Animal;
+import ex3.corrige.Comportement;
+import ex3.corrige.Type;
+import ex3.corrige.ZooCorrige;
+
 public class ZooApplication {
 
 	public static void main(String[] args) {
-		Zoo zoo = new Zoo("Thoiry");
-		
-		zoo.addAnimal("Gazelle", "MAMMIFERE", "HERBIVORE");
-		zoo.addAnimal("Zèbre", "MAMIFERE", "HERBIVORE");
-		zoo.addAnimal("Lion", "MAMMIFERE", "HERBIVORE");
-		zoo.addAnimal("Panthère", "MAMMIFERE", "CARNIVORE");
-		zoo.addAnimal("Requin blanc", "POISSON", "HERBIVORE");
-		zoo.addAnimal("Truite dorée", "POISSON", "HERBIVORE");
-		zoo.addAnimal("Boa constrictor", "SERPENT", "CARNIVORE");
-		zoo.addAnimal("Python", "SERPENT", "CARNIVORE");
+		ZooCorrige zoo = new ZooCorrige("Thoiry");
+
+		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Gazelle", Comportement.HERBIVORE));
+		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Zèbre", Comportement.HERBIVORE));
+		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Lion", Comportement.CARNIVORE));
+		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Panthère", Comportement.CARNIVORE));
+		zoo.addAnimal(new Animal(Type.POISSON, "Requin Blanc", Comportement.CARNIVORE));
+		zoo.addAnimal(new Animal(Type.POISSON, "Truite dorée", Comportement.HERBIVORE));
+		zoo.addAnimal(new Animal(Type.REPTILE, "Boa constrictor", Comportement.CARNIVORE));
+		zoo.addAnimal(new Animal(Type.REPTILE, "Python", Comportement.CARNIVORE));
+
+		zoo.afficherListeAnimaux();
 	}
 
 }
