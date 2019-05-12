@@ -18,4 +18,13 @@ public class SavaneCorrige extends ZoneZoo {
 
 	}
 
+	@Override
+	public boolean getType(Animal animal) {
+		if (animal.getType().equals(Type.MAMMIFERE) && animal.getComportement().equals(Comportement.HERBIVORE)) {
+			return true; 
+
+		}
+		return false;
+
+	}
 }

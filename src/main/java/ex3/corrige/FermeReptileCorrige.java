@@ -14,4 +14,13 @@ public class FermeReptileCorrige extends ZoneZoo {
 		return listeAnimal.size() * 0.1;
 	}
 
+	@Override
+	public boolean getType(Animal animal) {
+		if (animal.getType().equals(Type.REPTILE)) {
+			return true; 
+		}
+		return false;
+		
+	}
+
 }

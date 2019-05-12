@@ -17,4 +17,13 @@ public class AquariumCorrige extends ZoneZoo {
 		return listeAnimal.size() * 0.2;
 	}
 
+	@Override
+	public boolean getType(Animal animal) {
+		if (animal.getType().equals(Type.POISSON)) {
+			return true; 
+		}
+		return false;
+		
+	}
+
 }

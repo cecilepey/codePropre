@@ -23,9 +23,18 @@ public abstract class ZoneZoo {
 	 * @param animal
 	 */
 	public void addAnimal(Animal animal) {
-		listeAnimal.add(animal);
+		if (getType(animal)) {
+			listeAnimal.add(animal); 
+			
+		}
 
 	}
+
+	/**
+	 * méthode qui permet de connaitre la zone de l'animal 
+	 * @param animal
+	 */
+	public abstract boolean getType(Animal animal);
 
 	/**
 	 * Méthode qui affiche la liste des animaux de la zone
@@ -38,8 +47,8 @@ public abstract class ZoneZoo {
 	}
 
 	/**
-	 * méthode qui calcule la nourriture à donner aux animaux en fonction du
-	 * nombre d'animaux de la zone
+	 * méthode qui calcule la nourriture à donner aux animaux en fonction du nombre
+	 * d'animaux de la zone
 	 * 
 	 * @return le poids à donner aux animaux
 	 */

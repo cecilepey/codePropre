@@ -14,4 +14,13 @@ public class CarnivoreCorrige extends ZoneZoo {
 		return listeAnimal.size() * 10;
 	}
 
+	@Override
+	public boolean getType(Animal animal) {
+		if (animal.getType().equals(Type.MAMMIFERE) && animal.getComportement().equals(Comportement.HERBIVORE)) {
+			return true; 
+		}
+		return false;
+
+	}
+
 }

@@ -2,40 +2,63 @@ package ex4;
 
 import java.util.Date;
 
+/**
+ * classe qui gère les prets
+ * @author libata
+ *
+ */
 public class Pret {
 
+	/** strategy : Stategy */
 	private Strategy strategy;
+	/** cpital : double */
 	private double capital;
+	/** capitalRestantDu : double */
 	private double capitalRestantDu;
+	/** taux : double */
 	private double taux;
+	/** dateDebut : Date */
 	private Date dateDebut;
+	/** dateFin : Date */
 	private Date dateFin;
 	
-	public Pret(double capital, double taux, Date dateDebut) {
-		super();
+	/**
+	 * Constructeur
+	 * @param capital
+	 * @param taux
+	 * @param dateDebut
+	 */
+	public Pret( double capital, double taux, Date dateDebut) {
 		this.strategy = new PretATerme();
 		this.capital = capital;
 		this.taux = taux;
 		this.dateDebut = dateDebut;
 	}
 	
+	/**
+	 * constructeur
+	 * @param capital
+	 * @param taux
+	 * @param dateDebut
+	 * @param dateFin
+	 */
 	public Pret(double capital, double taux, Date dateDebut, Date dateFin) {
-		super();
-		this.strategy = new PretATerme();
-		this.capital = capital;
-		this.taux = taux;
-		this.dateDebut = dateDebut;
+		this(capital, taux, dateDebut);
 		this.dateFin = dateFin;
 	}
 	
+	/**
+	 * constructeur
+	 * @param capital
+	 * @param capitalRestantDu
+	 * @param taux
+	 * @param dateDebut
+	 * @param dateFin
+	 */
 	public Pret(double capital, double capitalRestantDu, double taux, Date dateDebut, Date dateFin) {
-		super();
-		this.strategy = new PretATerme();
-		this.capital = capital;
+		this(capital, taux, dateDebut, dateFin);
 		this.capitalRestantDu = capitalRestantDu;
-		this.taux = taux;
-		this.dateDebut = dateDebut;
-		this.dateFin = dateFin;
+
 	}
 
 	/** Getter for strategy

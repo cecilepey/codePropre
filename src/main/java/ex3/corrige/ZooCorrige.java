@@ -25,6 +25,7 @@ public class ZooCorrige {
 	/** zoo : List<ZoneZoo> liste contenant les zones du zoo */
 	List<ZoneZoo> zoo = new ArrayList();
 
+	
 	/**
 	 * Constructeur
 	 * 
@@ -47,15 +48,10 @@ public class ZooCorrige {
 	 */
 	public void addAnimal(Animal animal) {
 
-		if (animal.getType().equals(Type.MAMMIFERE) && animal.getComportement().equals(Comportement.CARNIVORE)) {
-			carnivore.addAnimal(animal);
-		} else if (animal.getType().equals(Type.MAMMIFERE) && animal.getComportement().equals(Comportement.HERBIVORE)) {
-			savane.addAnimal(animal);
-		} else if (animal.getType().equals(Type.REPTILE)) {
-			fermeReptile.addAnimal(animal);
-		} else if (animal.getType().equals(Type.POISSON)) {
-			aquarium.addAnimal(animal);
-		}
+		savane.addAnimal(animal); 
+		carnivore.addAnimal(animal);
+		fermeReptile.addAnimal(animal);
+		aquarium.addAnimal(animal);
 	}
 
 	/**

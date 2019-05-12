@@ -1,9 +1,4 @@
-package ex3;
-
-import ex3.corrige.Animal;
-import ex3.corrige.Comportement;
-import ex3.corrige.Type;
-import ex3.corrige.ZooCorrige;
+package ex3.corrige;
 
 public class ZooApplication {
 
