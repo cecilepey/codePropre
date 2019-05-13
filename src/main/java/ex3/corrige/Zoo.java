@@ -9,18 +9,18 @@ import java.util.List;
  * @author Cécile Peyras
  *
  */
-public class ZooCorrige {
+public class Zoo {
 
 	/** nom : String nom du zoo */
 	private String nom;
 	/** savane : zone du zoo : Savane Africaine */
-	private SavaneCorrige savane = new SavaneCorrige();
+	private ZoneSavaneAfricaine savane = new ZoneSavaneAfricaine();
 	/** carnivore : zone du zoo : Carnivore */
-	private CarnivoreCorrige carnivore = new CarnivoreCorrige();
+	private ZoneCarnivore carnivore = new ZoneCarnivore();
 	/** fermeReptile : zone du zoo : Ferme Reptile */
-	private FermeReptileCorrige fermeReptile = new FermeReptileCorrige();
+	private ZoneFermeReptile fermeReptile = new ZoneFermeReptile();
 	/** aquarium : zone du zoo : Aquarium */
-	private AquariumCorrige aquarium = new AquariumCorrige();
+	private ZoneAquarium aquarium = new ZoneAquarium();
 
 	/** zoo : List<ZoneZoo> liste contenant les zones du zoo */
 	List<ZoneZoo> zoo = new ArrayList();
@@ -32,7 +32,7 @@ public class ZooCorrige {
 	 * @param nom
 	 *            : nom du zoo
 	 */
-	public ZooCorrige(String nom) {
+	public Zoo(String nom) {
 		this.nom = nom;
 
 		zoo.add(savane);

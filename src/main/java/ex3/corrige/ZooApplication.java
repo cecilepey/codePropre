@@ -3,7 +3,7 @@ package ex3.corrige;
 public class ZooApplication {
 
 	public static void main(String[] args) {
-		ZooCorrige zoo = new ZooCorrige("Thoiry");
+		Zoo zoo = new Zoo("Thoiry");
 
 		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Gazelle", Comportement.HERBIVORE));
 		zoo.addAnimal(new Animal(Type.MAMMIFERE, "Zèbre", Comportement.HERBIVORE));

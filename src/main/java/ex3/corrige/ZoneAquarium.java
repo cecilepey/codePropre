@@ -9,7 +9,7 @@ package ex3.corrige;
  * @author Cécile Peyras
  *
  */
-public class AquariumCorrige extends ZoneZoo {
+public class ZoneAquarium extends ZoneZoo {
 
 	@Override
 	public double calculerKgsNourritureParJour() {
